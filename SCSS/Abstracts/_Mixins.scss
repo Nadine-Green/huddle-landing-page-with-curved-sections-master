@@ -1,0 +1,54 @@
+@mixin button($radius, $background-color, $color, $base-number){
+    background-color:$background-color;
+    color:$color;
+    border-radius:$radius;
+    padding:$base-number;/*/4 $base-number*1.5;*/
+    text-align:center;
+
+    @if $color==$Pink{
+        background-color: transparent;
+    }
+}
+
+@mixin footer{
+    background-color: $Very-Dark-Cyan;
+    display:flex;
+    justify-content: space-around;
+}
+
+@mixin huddle{
+    width:15rem;
+    @media(max-width:500px){
+        width:9rem;
+    }
+}
+
+@mixin section{
+    display:flex;
+    justify-content:space-between;
+    @media(max-width:500px){
+        flex-direction:column-reverse;
+        justify-content:center;
+        align-items:center;
+        gap:3rem;
+        object-fit:cover;
+    }
+
+    div{
+        align-self:center;
+        h1{
+            font-size:$description-h1;
+            @media(max-width:500px){
+                font-size:$description-h1/2;
+                text-align:center;
+                margin-bottom:0.5rem;
+            }
+        }
+    }
+
+    p{
+        @media(max-width:500px){
+            text-align:center;
+        }
+    }
+}

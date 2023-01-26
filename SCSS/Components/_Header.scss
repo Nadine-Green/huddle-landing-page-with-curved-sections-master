@@ -1,0 +1,21 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    margin-top:1rem;
+    padding:2rem;
+    padding-bottom:0rem;
+
+    img{
+        @include huddle;
+    }
+
+    a{
+        @include button($base-number*1.5, null, $Pink, null);
+        padding:$base-number/2 $base-number*1.5;
+        border: 1px solid $Light-Pink;
+                
+        &:hover{
+            box-shadow:0px 0px 3px 0px $Light-Pink;
+        }
+    }
+}
